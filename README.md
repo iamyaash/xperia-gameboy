@@ -50,7 +50,11 @@ This project documents how to repurpose the **Sony Xperia XZ2 Compact** into a G
         - Player Settings -> `52 - gbc - RetroArch - gearboy`
         - Player Settings -> `30 - gba - RetroArch - vba_next`
         > Note: Make sure to match the `*n - gbc/gbc RetroArch - *alias` (This applies to all the other emulation)
-
+5. Performace tweak using `adb` (Optional):
+    ```sh
+    chmod +x post-tweak.sh
+    ./post-tweak.sh
+    ```
 # Summary
 1. Uninstalled bloatware and other unnecessary applications by using [**UAD**.](https://github.com/0x192/universal-android-debloater/releases) This will remove most of the background running applications and we can squeeze more performance out of the device.
 2. Emulating applications such as **RetroArch**, **PPSSPP**, and others will enable games emulation.
