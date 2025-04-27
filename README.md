@@ -14,22 +14,52 @@ This project documents how to repurpose the **Sony Xperia XZ2 Compact** into a G
 
 2. Install the Applications
 
-**Manually**
-- [RetroArch](https://f-droid.org/packages/com.retroarch/)
-- [Daijisho](https://github.com/TapiocaFox/Daijishou/releases/tag/v1.4.80)
+    **Manually**
+    - [RetroArch](https://f-droid.org/packages/com.retroarch/) - for emulating retro games.
+    - [PPSSPP](https://www.ppsspp.org/download/) - for emulating PlayStation Portable games.
 
-**Via Script** (_Linux - Enable Debugging Mode in Phone_)
-```sh
-sudo dnf install android-tools
-```
-```sh
-chmod +x install_apps.sh
-./install_apps.sh
-```
+    **Via Script** (_Linux - Enable Debugging Mode in Phone_)
+    ```sh
+    sudo dnf install android-tools
+    ```
+    ```sh
+    chmod +x install_apps.sh
+    ./install_apps.sh
+    ```
 
-3. 
+3. Configure RetroArch & PPSSPP
 
-## Sony Xperia XZ2 Compact – Essential Specs for Retro Gaming
+    **RetroArch**:
+    - `Load Core` -> `Download a Core` -> (Download Cores for GB/C & GBA)
+    - Nintendo - Game Boy / Color (Gearboy)
+    - Nintendo - Game Boy Advance (VBA Next)
+    - `User Interface` -> `Quit on Close Content`
+
+    **PPSSPP**:
+    - System -> Backend -> `Vulkan`
+        - Mode -> `Skip buffer effects (non-buffered, faster)` (Optional, if SD >= 800)
+        - Ansiotropic Filtering - `16x`
+        - Texture Filtering - `Auto`
+        - Screen Scaling Filter - `Linear`
+        - Show FPS Counter - `Both`
+
+4. Install [**`daijisho`**](https://github.com/TapiocaFox/Daijishou) (_Dashboard - Standalone Launcher_)
+    - Settings -> Library -> Download Platforms
+        - GameBoy / Color / Advance
+    - Home -> Select Platform -> Edit -> 
+        - Player Settings -> `52 - gbc - RetroArch - gearboy`
+        - Player Settings -> `30 - gba - RetroArch - vba_next`
+        > Note: Make sure to match the `*n - gbc/gbc RetroArch - *alias` (This applies to all the other emulation)
+
+# Summary
+1. Uninstalled bloatware and other unnecessary applications by using [**UAD**.](https://github.com/0x192/universal-android-debloater/releases) This will remove most of the background running applications and we can squeeze more performance out of the device.
+2. Emulating applications such as **RetroArch**, **PPSSPP**, and others will enable games emulation.
+3. **`daijisho`** acts front-end dashboard and standalone launcher to navigate between games platforms easily.
+
+---
+---
+
+## Sony Xperia XZ2 Compact Specifications Overview
 
 | Category       | Specification |
 |----------------|---------------|
